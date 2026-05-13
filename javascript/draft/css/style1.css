@@ -1,0 +1,46 @@
+<style>
+			
+.scrollWrapper {
+	overflow-x: auto;
+	white-space: nowrap;
+	border: none;
+}
+
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+	width: 100%%;
+	border: 2px solid #ddd;
+	}
+
+th {
+	text-align: center;
+	padding: 8px;
+	border: 2px solid #ddd;
+	}
+
+td {
+	text-align: left;
+	padding: 8px;
+	border: 2px solid #ddd;
+	}
+
+div {
+	border: 1px solid red;
+	}
+
+
+.scroll-box {
+	max-height: 200px;
+	overflow-y: auto;
+	border: 1px solid #ccc;
+	padding: 10px;
+	background-color: #f9f9f9;
+	}
+
+thermostat-data {
+	border: 1px solid green;
+}
+
+</style>

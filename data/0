@@ -1,0 +1,36 @@
+#!/bin/sh
+#Check json files for error(s)
+
+main() {
+	case "$1" in
+		"v") #verify if a json files are valid
+			files=$(find . -maxdepth 1 -name "*.json")
+			#printf '\nl0 debug, json files found = %s' "$files"
+			for f in $files; do
+				#printf '\ndebug looping for file %s' $f
+				if jq empty $f; then
+					printf '\njson is valid for %s' $f
+				else
+					printf 'json INVALID for %s' $f
+				fi
+				done #end for
+
+			#json_string=$(cat ofc1.json)
+			#if jq -e . >/dev/null 2>&1 <<<"$json_string"; then
+			#	echo "Parsed JSON successfully and got something other than false/null"
+			#else
+			#	echo "Failed to parse JSON, or got false/null"
+			#fi
+			;;
+		"t") #have jq report line number of an error
+			file=ofc1.json
+			cat "$file" | jq
+			;;
+		*)
+			printf '\nunexpected choice / case %s, exiting' "$1"; exit 1
+		;;
+	esac
+} #end function
+
+
+main "$@"; exit 0

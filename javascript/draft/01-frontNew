@@ -1,0 +1,2 @@
+<!-- Experiment with a custom-element for thermostat -->
+<thermostat-data room="tbd">Placeholder text</thermostat-data>

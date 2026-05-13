@@ -1,0 +1,116 @@
+#!/bin/sh
+#concatenate files to make an html
+
+main() {
+
+		#debug json errors
+		#	printf 'debugging JSON file'
+		#	file=tmp.json
+		#	cat "$file" | jq
+		#exit 0
+
+	ofile='../index.html'
+
+	#remove old output file, if present
+		if [ -f $ofile ]; then
+			rm $ofile
+			fi
+
+			printf '<!DOCTYPE html>' >> "$ofile"
+			printf '<html lang="en"><head>' >> "$ofile"
+			printf '\n<meta name="viewport" content="width=device-width, initial-scale=1">' >> "$ofile"
+			printf '\n<title>Heat, Ventillation, A/C (hvac)</title>' >> "$ofile"
+
+			printf '\n' >> $ofile
+			printf '\n' >> $ofile
+			cat css/style1.css >> "$ofile"
+
+			printf '\n</head><body>' >> "$ofile"
+
+			printf '\n\n' >> $ofile
+			cat 01-frontNew   >> $ofile #new file with custom element
+			
+			#cat '02-front' >> $ofile  #front end and buttons when tables of data loaded
+
+			#addTables
+			#addJs
+
+
+		#moving module/script to end of body enabled it to work for custom element. Didn't work at top of file.
+		printf '\n<script type="module" src="draft/imports.js"></script>' >> "$ofile" #lists imported modules
+	
+		printf '\n\n' >> $ofile
+		cat 99-test.js	>> $ofile  #test the import, resolve reference error
+
+	printf '\n\n' >> $ofile
+	printf '</body></html>' >> "$ofile"
+
+
+}
+
+addTables() {
+	#Add html tables - previous version of code
+	printf '\n\n<br><hr><br>\n\n' >> $ofile
+	cat '03-ofc1' >> $ofile
+	printf '\n\n<br><hr><br>\n\n' >> $ofile
+	cat '04-ofc2' >> $ofile
+	printf '\n\n<br><hr><br>\n\n' >> $ofile
+	cat '05-rm1' >> $ofile
+	printf '\n\n<br><hr><br>\n\n' >> $ofile
+	cat '06-rm4' >> $ofile
+	printf '\n\n<br><hr><br>\n\n' >> $ofile
+	cat '07-nursery' >> $ofile
+	printf '\n\n<br><hr><br>\n\n' >> $ofile
+	cat '08-wc' >> $ofile
+	printf '\n\n<br><hr><br>\n\n' >> $ofile
+	cat '09-modA' >> $ofile
+	printf '\n\n<br><hr><br>\n\n' >> $ofile
+	cat '10-modB' >> $ofile
+	printf '\n\n<br><hr><br>\n\n' >> $ofile
+	cat '11-modC' >> $ofile
+	printf '\n\n<br><hr><br>\n\n' >> $ofile
+}
+
+addJs() {
+	#javascript
+	printf '\n<script>' >> $ofile
+	cat 13-globals.js >> $ofile
+	cat 14-listeners.js >> $ofile
+	cat 17-readTables.js >> $ofile
+	cat 15-select1.js >> $ofile
+	cat 16-rpt.js >> $ofile
+	cat 19-mkJsonFile.js >> $ofile
+	cat 20-copyClipboard.js	>> $ofile
+	printf '\n</script>' >> $ofile
+}
+
+main "$@"; exit 0
+
+#Old code waiting before delete
+#	case "$1" in
+#		"m") #manual concatenante		
+#			printf '\nnot implemented'
+#			;;
+#		"ac") #automated concatenate
+#			printf '\noption ac deactivated due to not knowing how to operate find -regex'
+#
+#			#decided to hardcode instead of using gnu find due to delay getting the correct regex
+#				#files==$(find . -type f -regex '\./[0-9][0-9].*') #output with =
+#				#files=$(find . -regextype posix-basic -regex '\./.[[:digit:]]*') #no output
+#				#files==$(find . -type f -regex '^\d\d.*') #no output
+#				#files==$(find . -type f -regex  '\d{2}.*') #no output
+#				#files==$(find . -type f -regex  '([1-9]|1[0-2])-.*') #no output
+#				#files==$(find . -type f -regex  '0[0-2]-.*') #no output
+#			#printf '\ndebug files=%s' $files
+#
+#			#subsort=$(printf '%s' "$files" | sort)
+#			#for i in $subsort; do
+#			#	printf '\ndebug files again%s' $i
+#			#	#printf '\n\n' >> "$i"
+#			#	#cat "$i" >> "$ofile"
+#			#done
+#			;;
+#		*)
+#			printf '\nunexpected choice / case %s. Expected ./0 c    ..... exiting' "$choice"; exit 1
+#		;;
+#	esac

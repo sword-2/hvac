@@ -1,0 +1,12 @@
+{
+	"Element": "table",
+	"Caption": "Defaults",
+	"Header": { "Text": "Season", "Mode", "Min", "Max" }, 
+	"Rows": [
+		{	"Summer", "H*C", 69, 73 },
+		{	"Winter", "H*C", 69, 73 },
+		{	"Spring", "H*C", 69, 73 }
+		{	"Fall", "H*C", 69, 73 }
+	],
+	"Comment": "The defaults are the ordinary thermostat mode(s) and temperatures which had been succeding most of the time."
+}
