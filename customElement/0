@@ -29,7 +29,7 @@ main() {
 	#printf '\n<script type="module" src="./imports.js"></script>' >> "$ofile" #lists imported modules
 		#Adjust module for troubleshooting
 	printf '\n<script type="module">' >> "$ofile" 
-		printf '\nimport Thermostat from "./element/thermostat.js;"' >> "$ofile"
+		printf '\nimport Thermostat from "./element/thermostat.js";' >> "$ofile"
 		printf '\nimport { loadJson } from "./whatwg/fetch.js";' >> "$ofile"
 	printf '\n</script>' >> "$ofile"
 	
@@ -52,7 +52,10 @@ addHtml() {
 	pfx='html/'
 	printf '\n\n' >> $1
 	cat ${pfx}01-frontNew >> $1 #new file with custom element		
-	#cat ${pfx}'02-frontPrev' >> $1  #front end and buttons when tables of data loaded
+	printf '\n\n' >> $1
+	cat ${pfx}02-statusEl >> $1 #new file with custom element		
+	#printf '\n\n' >> $1
+	#cat ${pfx}'03-frontPrev' >> $1  #front end and buttons when tables of data loaded
 }
 
 addTables() {
@@ -85,7 +88,8 @@ addJs() {
 	printf '\n\n' >> $1
 	#already should have script tag in file(s) - printf '\n<script>' >> $1
 	printf '\n\n' >> $1
-
+	cat ${pfx}01-globals.js	>> $1  #test the import, resolve reference error
+	printf '\n\n' >> $1
 	cat ${pfx}99-test.js	>> $1  #test the import, resolve reference error
 
 	#printf '\n\n' >> $1

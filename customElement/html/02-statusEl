@@ -1,0 +1,3 @@
+<!-- An element where javascript or a module might report status to opertor -->
+<div id="stat">
+</div>
