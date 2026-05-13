@@ -37,7 +37,7 @@ main() {
 
 
 		#moving module/script to end of body enabled it to work for custom element. Didn't work at top of file.
-		printf '\n<script type="module" src="draft/imports.js"></script>' >> "$ofile" #lists imported modules
+		printf '\n<script type="module" src="./imports.js"></script>' >> "$ofile" #lists imported modules
 	
 		printf '\n\n' >> $ofile
 		cat 99-test.js	>> $ofile  #test the import, resolve reference error
