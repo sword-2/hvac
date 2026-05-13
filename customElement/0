@@ -45,6 +45,7 @@ addCss() {
 
 addHtml() {
 	pfx='html/'
+	printf '\n\n' >> $1
 	cat ${pfx}01-frontNew >> $1 #new file with custom element		
 	#cat ${pfx}'02-frontPrev' >> $1  #front end and buttons when tables of data loaded
 }
@@ -77,7 +78,7 @@ addJs() {
 	#javascript files
 	pfx='js/'
 	printf '\n\n' >> $1
-	printf '\n<script>' >> $1
+	#already should have script tag in file(s) - printf '\n<script>' >> $1
 	printf '\n\n' >> $1
 
 	cat ${pfx}99-test.js	>> $1  #test the import, resolve reference error
@@ -97,7 +98,8 @@ addJs() {
 	#printf '\n\n' >> $1
 	#cat ${pfx}20-copyClipboard.js	>> $1
 	#printf '\n\n' >> $1
-	printf '\n</script>' >> $1
+	
+	#Should already have tag in files - printf '\n</script>' >> $1
 }
 
 main "$@"; exit 0
