@@ -1,4 +1,4 @@
-import Thermostat from './element/thermostat.js';
+//import Thermostat from './element/thermostat.js';
 import { loadJson } from './whatwg/fetch.js';
 
 /*
