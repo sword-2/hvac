@@ -30,7 +30,7 @@ main() {
 		#Adjust module for troubleshooting
 	printf '\n<script type="module">' >> "$ofile" 
 		printf '\nimport Thermostat from "./element/thermostat.js";' >> "$ofile"
-		printf '\nimport { loadJson } from "./whatwg/fetch.js";' >> "$ofile"
+		#printf '\nimport { loadJson } from "./whatwg/fetch.js";' >> "$ofile"
 	printf '\n</script>' >> "$ofile"
 	
 	printf '\n\n' >> $ofile
@@ -88,7 +88,7 @@ addJs() {
 	printf '\n\n' >> $1
 	#already should have script tag in file(s) - printf '\n<script>' >> $1
 	printf '\n\n' >> $1
-	cat ${pfx}01-globals.js	>> $1  #test the import, resolve reference error
+	cat ${pfx}01-globals.js	>> $1  #simple variables
 	printf '\n\n' >> $1
 	cat ${pfx}99-test.js	>> $1  #test the import, resolve reference error
 
