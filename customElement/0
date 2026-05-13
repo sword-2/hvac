@@ -11,27 +11,27 @@ main() {
 			fi
 
 	printf '<!DOCTYPE html>' >> "$ofile"
-	printf '<html lang="en"><head>' >> "$ofile"
+	printf '\n<html lang="en">' >> "$ofile"
+	printf '\n<head>' >> "$ofile"
 	printf '\n<meta name="viewport" content="width=device-width, initial-scale=1">' >> "$ofile"
 	printf '\n<title>Heat, Ventillation, A/C (hvac)</title>' >> "$ofile"
-
 	printf '\n\n' >> $ofile
 	addCss
-
+	printf '\n\n' >> $ofile
 	printf '\n</head><body>' >> "$ofile"
 	addHtml
-	printf '\n\n' >> $ofile
 
+	#printf '\n\n' >> $ofile
 	#addTables
+
+	printf '\n\n' >> $ofile
 	addJs
 
 	#moving module/script to end of body enabled it to work for custom element. Didn't work at top of file.
+	printf '\n\n' >> $ofile
 	printf '\n<script type="module" src="./imports.js"></script>' >> "$ofile" #lists imported modules
 
-	printf '\n\n' >> $ofile
-
-
-	printf '</body></html>' >> "$ofile"
+	printf '\n\n</body></html>' >> "$ofile"
 
 
 }
