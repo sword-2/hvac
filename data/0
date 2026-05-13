@@ -26,6 +26,14 @@ main() {
 			file=ofc1.json
 			cat "$file" | jq
 			;;
+		"o")
+			printf '\nWhen coded, this is older code to check a json file'
+			#debug json errors
+			#	printf 'debugging JSON file'
+			#	file=tmp.json
+			#	cat "$file" | jq
+			#exit 0
+			;;
 		*)
 			printf '\nunexpected choice / case %s, exiting' "$1"; exit 1
 		;;

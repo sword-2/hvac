@@ -1,0 +1,36 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Heat, Ventillation, A/C (hvac)</title>
+
+<style>
+
+thermostat-data {
+	border: 1px solid green;
+}
+
+</style>
+
+</head><body><!-- Experiment with a custom-element for thermostat -->
+<thermostat-data room="tbd">Placeholder text</thermostat-data>
+
+
+
+
+
+<script>
+
+<script>
+	try {
+		let data = '02-front: ';
+		data += loadJson('https://raw.githubusercontent.com/sword-2/hvac/refs/heads/main/data/programs/table.office1.json');
+		alert(data);
+		} catch(error) {
+			let err = '02-front ' + error;
+			alert(err);
+		}
+</script>
+
+</script>
+<script type="module" src="./imports.js"></script>
+
+</body></html>

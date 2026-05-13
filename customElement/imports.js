@@ -1,5 +1,5 @@
-import Thermostat from './draft/ui/thermostat.js';
-import { loadJson } from './draft/whatwg/fetch.js';
+import Thermostat from './element/thermostat.js';
+import { loadJson } from './whatwg/fetch.js';
 
 /*
 import { create, createReportList } from './modules/canvas.js';
