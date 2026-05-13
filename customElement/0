@@ -24,12 +24,12 @@ main() {
 	#printf '\n\n' >> $ofile
 	#addTables
 
-	printf '\n\n' >> $ofile
-	addJs $ofile
-
 	#moving module/script to end of body enabled it to work for custom element. Didn't work at top of file.
 	printf '\n\n' >> $ofile
 	printf '\n<script type="module" src="./imports.js"></script>' >> "$ofile" #lists imported modules
+	
+	printf '\n\n' >> $ofile
+	addJs $ofile
 
 	printf '\n\n</body></html>' >> "$ofile"
 
