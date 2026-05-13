@@ -26,7 +26,12 @@ main() {
 
 	#moving module/script to end of body enabled it to work for custom element. Didn't work at top of file.
 	printf '\n\n' >> $ofile
-	printf '\n<script type="module" src="./imports.js"></script>' >> "$ofile" #lists imported modules
+	#printf '\n<script type="module" src="./imports.js"></script>' >> "$ofile" #lists imported modules
+		#Adjust module for troubleshooting
+	printf '\n<script type="module">' >> "$ofile" 
+		printf '\nimport Thermostat from "./element/thermostat.js;"' >> "$ofile"
+		printf '\nimport { loadJson } from "./whatwg/fetch.js";' >> "$ofile"
+	printf '\n</script>' >> "$ofile"
 	
 	printf '\n\n' >> $ofile
 	addJs $ofile
