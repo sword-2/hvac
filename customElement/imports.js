@@ -2,6 +2,7 @@ import Thermostat from './element/thermostat.js';
 import { loadJson } from './whatwg/fetch.js';
 
 /*
+ * Example code from MDN ...
 import { create, createReportList } from './modules/canvas.js';
 import { name, draw, reportArea, reportPerimeter } from './modules/square.js';
 import randomSquare from './modules/square.js';

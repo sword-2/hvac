@@ -16,16 +16,16 @@ main() {
 	printf '\n<meta name="viewport" content="width=device-width, initial-scale=1">' >> "$ofile"
 	printf '\n<title>Heat, Ventillation, A/C (hvac)</title>' >> "$ofile"
 	printf '\n\n' >> $ofile
-	addCss
+	addCss $ofile
 	printf '\n\n' >> $ofile
 	printf '\n</head><body>' >> "$ofile"
-	addHtml
+	addHtml $ofile
 
 	#printf '\n\n' >> $ofile
 	#addTables
 
 	printf '\n\n' >> $ofile
-	addJs
+	addJs $ofile
 
 	#moving module/script to end of body enabled it to work for custom element. Didn't work at top of file.
 	printf '\n\n' >> $ofile
@@ -38,65 +38,66 @@ main() {
 
 addCss() {
 	pfx='css/'
-	cat ${pfx}element.css >> "$ofile"
-	#cat ${pfx}style1.css >> "$ofile"
+	printf '\n\n' >> $1
+	cat ${pfx}element.css >> $1
+	#cat ${pfx}style1.css >> $1
 }
 
 addHtml() {
 	pfx='html/'
-	cat ${pfx}01-frontNew   >> $ofile #new file with custom element		
-	#cat ${pfx}'02-frontPrev' >> $ofile  #front end and buttons when tables of data loaded
+	cat ${pfx}01-frontNew >> $1 #new file with custom element		
+	#cat ${pfx}'02-frontPrev' >> $1  #front end and buttons when tables of data loaded
 }
 
 addTables() {
 	#Add html tables - tables contain data, first version of software
-	printf '\n\n<br><hr><br>\n\n' >> $ofile
+	printf '\n\n<br><hr><br>\n\n' >> $1
 	pfx='dataTables/'
-	cat ${pfx}'03-ofc1' >> $ofile
-	printf '\n\n<br><hr><br>\n\n' >> $ofile
-	cat ${pfx}'04-ofc2' >> $ofile
-	printf '\n\n<br><hr><br>\n\n' >> $ofile
-	cat ${pfx}'05-rm1' >> $ofile
-	printf '\n\n<br><hr><br>\n\n' >> $ofile
-	cat ${pfx}'06-rm4' >> $ofile
-	printf '\n\n<br><hr><br>\n\n' >> $ofile
-	cat ${pfx}'07-nursery' >> $ofile
-	printf '\n\n<br><hr><br>\n\n' >> $ofile
-	cat ${pfx}'08-wc' >> $ofile
-	printf '\n\n<br><hr><br>\n\n' >> $ofile
-	cat ${pfx}'09-modA' >> $ofile
-	printf '\n\n<br><hr><br>\n\n' >> $ofile
-	cat ${pfx}'10-modB' >> $ofile
-	printf '\n\n<br><hr><br>\n\n' >> $ofile
-	cat ${pfx}'11-modC' >> $ofile
-	printf '\n\n<br><hr><br>\n\n' >> $ofile
+	cat ${pfx}'03-ofc1' >> $1
+	printf '\n\n<br><hr><br>\n\n' >> $1
+	cat ${pfx}'04-ofc2' >> $1
+	printf '\n\n<br><hr><br>\n\n' >> $1
+	cat ${pfx}'05-rm1' >> $1
+	printf '\n\n<br><hr><br>\n\n' >> $1
+	cat ${pfx}'06-rm4' >> $1
+	printf '\n\n<br><hr><br>\n\n' >> $1
+	cat ${pfx}'07-nursery' >> $1
+	printf '\n\n<br><hr><br>\n\n' >> $1
+	cat ${pfx}'08-wc' >> $1
+	printf '\n\n<br><hr><br>\n\n' >> $1
+	cat ${pfx}'09-modA' >> $1
+	printf '\n\n<br><hr><br>\n\n' >> $1
+	cat ${pfx}'10-modB' >> $1
+	printf '\n\n<br><hr><br>\n\n' >> $1
+	cat ${pfx}'11-modC' >> $1
+	printf '\n\n<br><hr><br>\n\n' >> $1
 }
 
 addJs() {
 	#javascript files
 	pfx='js/'
-	printf '\n\n' >> $ofile
-	printf '\n<script>' >> $ofile
-	printf '\n\n' >> $ofile
+	printf '\n\n' >> $1
+	printf '\n<script>' >> $1
+	printf '\n\n' >> $1
 
-	cat ${pfx}99-test.js	>> $ofile  #test the import, resolve reference error
+	cat ${pfx}99-test.js	>> $1  #test the import, resolve reference error
 
-	#printf '\n\n' >> $ofile
-	#cat ${pfx}13-globals.js >> $ofile
-	#printf '\n\n' >> $ofile
-	#cat ${pfx}14-listeners.js >> $ofile
-	#printf '\n\n' >> $ofile
-	#cat ${pfx}17-readTables.js >> $ofile
-	#printf '\n\n' >> $ofile
-	#cat ${pfx}15-select1.js >> $ofile
-	#printf '\n\n' >> $ofile
-	#cat ${pfx}16-rpt.js >> $ofile
-	#printf '\n\n' >> $ofile
-	#cat ${pfx}19-mkJsonFile.js >> $ofile
-	#printf '\n\n' >> $ofile
-	#cat ${pfx}20-copyClipboard.js	>> $ofile
-	#printf '\n\n' >> $ofile
-	printf '\n</script>' >> $ofile
+	#printf '\n\n' >> $1
+	#cat ${pfx}13-globals.js >> $1
+	#printf '\n\n' >> $1
+	#cat ${pfx}14-listeners.js >> $1
+	#printf '\n\n' >> $1
+	#cat ${pfx}17-readTables.js >> $1
+	#printf '\n\n' >> $1
+	#cat ${pfx}15-select1.js >> $1
+	#printf '\n\n' >> $1
+	#cat ${pfx}16-rpt.js >> $1
+	#printf '\n\n' >> $1
+	#cat ${pfx}19-mkJsonFile.js >> $1
+	#printf '\n\n' >> $1
+	#cat ${pfx}20-copyClipboard.js	>> $1
+	#printf '\n\n' >> $1
+	printf '\n</script>' >> $1
 }
 
 main "$@"; exit 0
