@@ -1,5 +1,5 @@
 //fetch had its own living standard at https://fetch.spec.whatwg.org/
-// Example using async/await
+
 export async function loadJson(url) {
   try {
     //const response = await fetch('./data.json'); // Replace with your file path
@@ -10,7 +10,7 @@ export async function loadJson(url) {
     const data = await response.json();
 	return(data);
     //console.log(data);
-  } catch (error) {
+} catch (error) {
   	let err = 'Could not load JSON:' + error;
 	throw new Error(err);
     //console.error('Could not load JSON:', error);

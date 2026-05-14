@@ -23,7 +23,7 @@ main() {
 			#fi
 			;;
 		"t") #have jq report line number of an error
-			file=ofc1.json
+			file=programs/table.office1.json
 			cat "$file" | jq
 			;;
 		"o")
