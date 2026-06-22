@@ -1,0 +1,602 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Modular A HVAC</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.row {
+  display: flex;
+  margin-left:-5px;
+  margin-right:-5px;
+}
+
+.column {
+  flex: 50%;
+  padding: 5px;
+}
+
+.ctr  {
+text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 10px;
+	height: 5px;
+  border-style: solid;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+</style>
+</head>
+<body>
+
+
+<div class="row">
+  <div class="column">
+	<p class="ctr">Modular A programming, winter</p>
+    <table>
+      <tr>
+        <th>Day</th>
+        <th>Number</th>
+        <th>Action</th>
+        <th>Time</th>
+        <th>Mode</th>
+        <th>Temp</th>
+        <th>Event</th>
+      </tr>
+      <tr>
+        <td>Monday</td>
+        <td>1</td>
+        <td>on</td>
+        <td>12:00</td>
+        <td>heat</td>
+        <td>68</td>
+        <td>McClure and Co</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>2</td>
+        <td>off</td>
+        <td>14:00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>3</td>
+        <td>on</td>
+        <td>16:00</td>
+        <td>heat</td>
+        <td>68</td>
+        <td>FBI</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>4</td>
+        <td>off</td>
+        <td>19:30</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Tuesday</td>
+        <td>1</td>
+        <td>off</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>2</td>
+        <td>off</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>3</td>
+        <td>on</td>
+        <td>14:30</td>
+        <td>heat</td>
+        <td>68</td>
+        <td>choir(s)</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>4</td>
+        <td>off</td>
+        <td>18:30</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Wednesday</td>
+        <td>1</td>
+        <td>off</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>2</td>
+        <td>off</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>3</td>
+        <td>on</td>
+        <td>16:30</td>
+        <td>heat</td>
+        <td>68</td>
+        <td>FBI</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>4</td>
+        <td>off</td>
+        <td>21:00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Thursday</td>
+        <td>1</td>
+        <td>on</td>
+        <td>06:00</td>
+        <td>heat</td>
+        <td>68</td>
+        <td>CC</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>2</td>
+        <td>off</td>
+        <td>15:10</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>3</td>
+        <td>on</td>
+        <td>1700</td>
+        <td>heat</td>
+        <td>68</td>
+        <td>AWANA</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>4</td>
+        <td>off</td>
+        <td>19:40</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Friday</td>
+        <td>1</td>
+        <td>off</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>2</td>
+        <td>off</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>3</td>
+        <td>on</td>
+        <td>16:20</td>
+        <td>heat</td>
+        <td>68</td>
+        <td>ohana</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>4</td>
+        <td>off</td>
+        <td>20:00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Saturday</td>
+        <td>1</td>
+        <td>off</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>2</td>
+        <td>off</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>3</td>
+        <td>off</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>4</td>
+        <td>off</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Sunday</td>
+        <td>1</td>
+        <td>on</td>
+        <td>05:30</td>
+        <td>heat</td>
+        <td>68</td>
+        <td>1-3rd service</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>2</td>
+        <td>off</td>
+        <td>12:40</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>3</td>
+        <td>on</td>
+        <td>15:30</td>
+        <td>heat</td>
+        <td>68</td>
+        <td>AWANA Trek</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>4</td>
+        <td>off</td>
+        <td>18:30</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="7">If there is a question or change, please contact Greg Smith.</td>
+      </tr>
+    </table>
+  </div>
+  <div class="column">
+	<p class="ctr">Modular A programming, summer</p>
+    <table>
+      <tr>
+        <th>Day</th>
+        <th>Number</th>
+        <th>Action</th>
+        <th>Time</th>
+        <th>Mode</th>
+        <th>Temp</th>
+        <th>Event</th>
+      </tr>
+      <tr>
+        <td>Monday</td>
+        <td>1</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>2</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>3</td>
+        <td>on</td>
+        <td>16:00</td>
+        <td>cool</td>
+        <td>73</td>
+        <td>FBI</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>4</td>
+        <td>off</td>
+        <td>21:00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Tuesday</td>
+        <td>1</td>
+        <td>off</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>2</td>
+        <td>off</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>3</td>
+        <td>on</td>
+        <td>15:00</td>
+        <td>cool</td>
+        <td>73</td>
+        <td>Choir(s)</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>4</td>
+        <td>off</td>
+        <td>18:30</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Wednesday</td>
+        <td>1</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>2</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>3</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>4</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Thursday</td>
+        <td>1</td>
+        <td>on</td>
+        <td>07:00</td>
+        <td>cool</td>
+        <td>73</td>
+        <td>CC</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>2</td>
+        <td>off</td>
+        <td>15:10
+	   </td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>3</td>
+        <td>on</td>
+        <td>16:30</td>
+        <td>cool</td>
+        <td>73</td>
+        <td>AWANA</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>4</td>
+        <td>off</td>
+        <td>19:40</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Friday</td>
+        <td>1</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>2</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>3</td>
+        <td>on</td>
+        <td>1500</td>
+        <td>cool</td>
+        <td>73</td>
+        <td>Ohana</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>4</td>
+        <td>off</td>
+        <td>20:00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Saturday</td>
+        <td>1</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>2</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>3</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>4</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td>Sunday</td>
+        <td>1</td>
+        <td>on</td>
+        <td>08:30</td>
+        <td>cool</td>
+        <td>73</td>
+        <td>1-3rd service</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>2</td>
+        <td>off</td>
+        <td>12:40</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>3</td>
+        <td>on</td>
+        <td>15:00</td>
+        <td>cool</td>
+        <td>73</td>
+        <td>AWANA Trek</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>4</td>
+        <td>off</td>
+        <td>18:30</td>
+        <td></td>
+        <td></td>
+        <td></td>
+      </tr>
+      <tr>
+        <td colspan="7">If there is a question or change, please contact Greg Smith.</td>
+      </tr>
+    </table>
+  </div>
+</div>
+<!--
+<p>Acronyms:
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;AWANA - Approved Workmen Are Not Ashamed
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CC - Classical Conversations
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;FBI - Faith Bible Institute
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;HVAC - Heating, Ventillation, and Air Conditioning
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ohana - Hawaiian word for family
+<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PTFFP - Prime Time Fit and Fall Proof
+</p>
+-->
+<!--
+	Will automatic programming from a group's calendar to the HVAC controller shorten the time to operate the utility and increase efficiency? Data formats and standards with potential to shorten the time may include: XML, iCal, and Web of Things. A good reputation for works in other contexts (not utilities) is encourage in Acts 6:3 and 1 Timothy 3:7. If this counted as a good example to others it might increase reputation where the good example can replace legal trouble (i.e. GAO-20-104).
+-->
+</body>
+</html>

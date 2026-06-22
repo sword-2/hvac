@@ -1,0 +1,23 @@
+[
+	{ "No": 21, "Label": "Spring (independent of location)" },
+	{ "No": 22, "Label": "Summer (independent of location)" },
+	{ "No": 23, "Label": "Autumn (independent of location)" },
+	{ "No": 24, "Label": "Winter (independent of location)" },
+	{ "No": 25, "Label": "Spring - Northern Hemisphere" },
+	{ "No": 26, "Label": "Summer - Northern Hemisphere" },
+	{ "No": 27, "Label": " Autumn - Northern Hemisphere" },
+	{ "No": 28, "Label": "Winter - Northern Hemisphere" },
+	{ "No": 29, "Label": "Spring - Southern Hemisphere" },
+	{ "No": 30, "Label": "Summer - Southern Hemisphere" },
+	{ "No": 31, "Label": "Autumn - Southern Hemisphere" },
+	{ "No": 32, "Label": "Winter - Southern Hemisphere" },
+	{ "No": 33, "Label": "Quarter 1 (3 months in duration)" },
+	{ "No": 34, "Label": "Quarter 2 (3 months in duration)" },
+	{ "No": 35, "Label": "Quarter 3 (3 months in duration)" },
+	{ "No": 36, "Label": "Quarter 4 (3 months in duration)" },
+	{ "No": 37, "Label": "Quadrimester 1 (4 months in duration)" },
+	{ "No": 38, "Label": " Quadrimester 2 (4 months in duration)" },
+	{ "No": 39, "Label": "Quadrimester 3 (4 months in duration)" },
+	{ "No": 40, "Label": "Semestral 1 (6 months in duration)" },
+	{ "No": 41, "Label": "Semestral 2 (6 months in duration)" }
+]

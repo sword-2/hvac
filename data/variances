@@ -1,0 +1,41 @@
+MAPPING NESTs to rooms:
+	*Not all rooms have a thermostat.
+	*nursery is for nursery, room 5, & room 6.
+	*office 2 controls kitchen & hallway. But no programming is done for hallways.
+	*Rm 1 controls Rm 1 and the west half of rm 4.
+	*rm 4 controls 2, 3, and half 4 [?east half]. For griefshare, Brad only runs rm 4 - not rm 1.
+	*WC1 controls west part of WC. it is the big unit and has 2 stages.
+	*WC2 controls the east part of WC and is a puny unit on roof.
+	*Brad runs both WC1 adn WC2 for worship center events.
+
+
+When running, WC1 programming is not each hour. This avoids reseting the 2 stages back to 1 stage each time a new program is encountered
+
+SPECIAL TEMPS:
+	*Office 2 for network equipment. 75/70 - 80/50.
+	*WC1 90/60 for grand piano
+	*Modular NESTs off since the HVAC was replaced by new units.
+	*Some groups may request custom increase or decrease in temp.
+
+NON-RESPONSIVE NESTs:
+	*nursery thermostat control has been slower compared to other NESTs.
+	*B2 (mod B) hasn't worked in years. Not replaced since not needed
+	*B1 doesn't always respond. Needed new password.
+
+VARIANCE FOR TIMES:
+	*Fan only used on Sunday and only for WC. at about 7:30, start it to run for next 8 hours. This prevents extra noice from it switching on and off.
+
+SETTINGS mostly default except:
+	early on -> on
+	sunblock -> on. maybe only matters for rm 1
+	airwave -> on. maybe only matters for summer
+	fan schedule -> off
+	safety temps -> off:off
+	lock: good to chek no one left it unlocked. Don't lock offices though.
+
+
+
+Journey:
+	on 23 Jan 2024, Joureny staff said the time was about 5-8pm.
+	1 Feb 2024 Journey staff used about whole building but not offices.
+	2 Feb learned office2 is not needed for the kitchen.

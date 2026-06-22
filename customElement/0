@@ -14,7 +14,7 @@ main() {
 	printf '\n<html lang="en">' >> "$ofile"
 	printf '\n<head>' >> "$ofile"
 	printf '\n<meta name="viewport" content="width=device-width, initial-scale=1">' >> "$ofile"
-	printf '\n<title>Heat, Ventillation, A/C (hvac)</title>' >> "$ofile"
+	printf '\n<title>Under construction - thermostat</title>' >> "$ofile"
 	printf '\n\n' >> $ofile
 	addCss $ofile
 	printf '\n\n' >> $ofile
@@ -49,17 +49,18 @@ addCss() {
 }
 
 addHtml() {
+	printf '\n\n<h2>Under construction - thermostat</h2>' >> $1
 	pfx='html/'
 	printf '\n\n' >> $1
-	cat ${pfx}01-frontNew >> $1 #new file with custom element		
+	cat ${pfx}01-customEl >> $1 #investigate custom element		
 	printf '\n\n' >> $1
-	cat ${pfx}02-statusEl >> $1 #new file with custom element		
+	cat ${pfx}02-statusEl >> $1 #status element that javascript can write to
 	#printf '\n\n' >> $1
 	#cat ${pfx}'03-frontPrev' >> $1  #front end and buttons when tables of data loaded
 }
 
 addTables() {
-	#Add html tables - tables contain data, first version of software
+	#This was the first way it was done - data mixed with html
 	printf '\n\n<br><hr><br>\n\n' >> $1
 	pfx='dataTables/'
 	cat ${pfx}'03-ofc1' >> $1
@@ -83,8 +84,12 @@ addTables() {
 }
 
 addJs() {
+	pfx='js/' #prefix
+	if [ ! -d "$pfx" ]; then
+    	echo "Directory does not exist for javascript prefix, exiting"
+    	exit
+	fi
 	#javascript files
-	pfx='js/'
 	printf '\n\n' >> $1
 	#already should have script tag in file(s) - printf '\n<script>' >> $1
 	printf '\n\n' >> $1

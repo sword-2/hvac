@@ -3,16 +3,18 @@
 
 main() {
 	case "$1" in
-		"v") #verify if a json files are valid
+		"1")
+			file='globals/table.defaults-nest.json'
+			#file='office1/table.programs.json'
+			#file='globals/subyearGroupings.json'
+			verify1JsonFile $file
+			;;
+		"vd") #verify a range ofjson files
 			files=$(find . -maxdepth 1 -name "*.json")
 			#printf '\nl0 debug, json files found = %s' "$files"
 			for f in $files; do
 				#printf '\ndebug looping for file %s' $f
-				if jq empty $f; then
-					printf '\njson is valid for %s' $f
-				else
-					printf 'json INVALID for %s' $f
-				fi
+				verify1JsonFile $f
 				done #end for
 
 			#json_string=$(cat ofc1.json)
@@ -27,7 +29,7 @@ main() {
 			cat "$file" | jq
 			;;
 		"o")
-			printf '\nWhen coded, this is older code to check a json file'
+			printf '\nWhen coded, this was a previous way to check a json file'
 			#debug json errors
 			#	printf 'debugging JSON file'
 			#	file=tmp.json
@@ -40,5 +42,14 @@ main() {
 	esac
 } #end function
 
+
+verify1JsonFile() {
+	printf '\nchecking file %s\n' "$1"
+	if jq empty $1; then
+		printf '\njson is valid for %s' $1
+	else
+		printf 'json INVALID for %s' $1
+	fi
+}
 
 main "$@"; exit 0

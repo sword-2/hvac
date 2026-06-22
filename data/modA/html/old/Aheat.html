@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Modular A heat/winter</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+
+.ctr  {
+text-align: center;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+  width: 100%;
+  border: 1px solid #ddd;
+}
+
+th, td {
+  text-align: left;
+  padding: 5px;
+	height: 5px;
+  border-style: solid;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+</style>
+</head>
+<body>
+
+<table border=1>
+	<caption>Modular A programming, heat/winter</caption>
+
+	<tr>
+	<th>Day</th>
+	<th>Number</th>
+	<th>Action</th>
+	<th>time, HVAC</th> <!-- the time for HVAC often prior to time of event -->
+	<th>Mode</th>
+	<th>Temp</th>
+	<th>event name</th>
+	<th>time, event</th>
+	</tr>
+
+	<tr>
+        <td>Monday</td>
+        <td>1</td>
+        <td>on</td>
+	   <td>12:00</td> 
+        <td>heat</td>
+        <td>68</td>
+        <td>McClure and Co</td>
+	   <td>13:00</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>2</td>
+        <td>off</td>
+        <td>14:00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+	   <td>14:00</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>3</td>
+        <td>on</td>
+        <td>16:00</td>
+        <td>heat</td>
+        <td>68</td>
+        <td>Faith Bible Institute</td>
+	   <td>18:00</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>4</td>
+        <td>off</td>
+        <td>19:30</td>
+        <td></td>
+        <td></td>
+        <td></td>
+	   <td>19:30</td>
+      </tr>
+
+
+      <tr>
+        <td>Tuesday</td>
+        <td>1</td>
+        <td>off</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+	   <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>2</td>
+        <td>off</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+	   <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>3</td>
+        <td>on</td>
+        <td>14:30</td>
+        <td>heat</td>
+        <td>68</td>
+        <td>choir(s), youth and children</td>
+	   <td>16:30</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>4</td>
+        <td>off</td>
+        <td>18:30</td>
+        <td></td>
+        <td></td>
+        <td></td>
+	   <td>18:30</td>
+      </tr>
+
+      <tr>
+        <td>Wednesday</td>
+        <td>1</td>
+        <td>off</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+	   <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>2</td>
+        <td>off</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+	   <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>3</td>
+        <td>on</td>
+        <td>16:30</td>
+        <td>heat</td>
+        <td>68</td>
+        <td>Faith Bible Institute</td>
+	   <td>18:00</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>4</td>
+        <td>off</td>
+        <td>21:00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+	   <td>21:00</td>
+      </tr>
+      <tr>
+        <td>Thursday</td>
+        <td>1</td>
+        <td>on</td>
+        <td>06:00</td>
+        <td>heat</td>
+        <td>68</td>
+        <td>Classical Conversations (homeschool)</td>
+	   <td>08:00</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>2</td>
+        <td>off</td>
+        <td>15:10</td>
+        <td></td>
+        <td></td>
+        <td></td>
+	   <td>15:00</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>3</td>
+        <td>on</td>
+        <td>1700</td>
+        <td>heat</td>
+        <td>68</td>
+        <td>Approved Workmen Are Not Ashamed (AWANA)</td>
+	   <td>18:00</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>4</td>
+        <td>off</td>
+        <td>19:40</td>
+        <td></td>
+        <td></td>
+        <td></td>
+	   <td>20:00</td>
+      </tr>
+      <tr>
+        <td>Friday</td>
+        <td>1</td>
+        <td>off</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+	   <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>2</td>
+        <td>off</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+	   <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>3</td>
+        <td>on</td>
+        <td>16:20</td>
+        <td>heat</td>
+        <td>68</td>
+        <td>ohana - Hawaiian term for Family</td>
+	   <td>17:00</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>4</td>
+        <td>off</td>
+        <td>20:00</td>
+        <td></td>
+        <td></td>
+        <td></td>
+	   <td>20:00</td>
+      </tr>
+      <tr>
+        <td>Saturday</td>
+        <td>1</td>
+        <td>off</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+	   <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>2</td>
+        <td>off</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+	   <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>3</td>
+        <td>off</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+	   <td></td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>4</td>
+        <td>off</td>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+	   <td></td>
+      </tr>
+      <tr>
+        <td>Sunday</td>
+        <td>1</td>
+        <td>on</td>
+        <td>05:30</td>
+        <td>heat</td>
+        <td>68</td>
+        <td>church services 1-3</td>
+	   <td>08:00</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>2</td>
+        <td>off</td>
+        <td>12:40</td>
+        <td></td>
+        <td></td>
+        <td></td>
+	   <td>12:15</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>3</td>
+        <td>on</td>
+        <td>15:30</td>
+        <td>heat</td>
+        <td>68</td>
+        <td>Approved Workmen Are Not Ashamed (AWANA) Trek</td>
+	   <td>16:50</td>
+      </tr>
+      <tr>
+        <td></td>
+        <td>4</td>
+        <td>off</td>
+        <td>18:30</td>
+        <td></td>
+        <td></td>
+        <td></td>
+	   <td>18:30</td>
+      </tr>
+      <tr>
+        <td colspan="8">If there is a question or change, please contact Greg Smith.</td>
+      </tr>
+	 <tr>
+        <td colspan="8">Acronym(s) - HVAC Heating, Ventillation, and Air Conditioning</td>
+	 </tr>
+    </table>
+
+</body>
+</html>

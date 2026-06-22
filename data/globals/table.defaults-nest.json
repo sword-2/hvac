@@ -1,0 +1,13 @@
+{
+	"Element": "table",
+	"Caption": "Defaults",
+	"Thermostat": "nest",
+	"Header": [ "Season", "Mode", "Min", "units", "Max", "units" ], 
+	"SubHeaders": [
+		[	"Summer", "H*C", 69, "F", 73, "F" ],
+		[	"Winter", "H*C", 69, "F", 73, "F" ],
+		[	"Spring", "H*C", 69, "F", 73, "F" ],
+		[	"Fall", "H*C", 69, "F", 73, "F" ]
+	],
+	"Comment": "The defaults are the ordinary thermostat mode(s) and temperatures which had been succeding most of the time."
+}
