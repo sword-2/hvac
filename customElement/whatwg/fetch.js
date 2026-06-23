@@ -1,4 +1,4 @@
-//fetch had its own living standard at https://fetch.spec.whatwg.org/
+//Try and learn about the fetch living standard. How to get data with it?
 
 export async function loadJson(url) {
   try {

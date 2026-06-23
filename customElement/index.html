@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Under constructino - Heat, Ventillation, A/C (hvac)</title>
+<title>Under construction - thermostat</title>
 
 
 
@@ -21,6 +21,8 @@ div {
 
 
 </head><body>
+
+<h2>Under construction - thermostat</h2>
 
 <!-- Experiment with a custom-element for thermostat -->
 <thermostat-data room="tbd">Placeholder text</thermostat-data>
@@ -49,7 +51,7 @@ import Thermostat from "./element/thermostat.js";
 	import { loadJson } from "./whatwg/fetch.js";
 	try {
 		stat.innerHTML += "99-test.js running ....";
-		let data = loadJson('https://raw.githubusercontent.com/sword-2/hvac/refs/heads/main/data/programs/table.office1.json');
+		let data = loadJson('https://raw.githubusercontent.com/sword-2/hvac/refs/heads/main/data/office1/table.programs.json');
 		stat.innerHTML += "<br>data=<br>" + data;
 		} catch(error) {
 			stat.innerHTML += "<br>error=<br>" + error;
